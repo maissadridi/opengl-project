@@ -1,0 +1,33 @@
+#ifndef MESH_H
+#define MESH_H
+
+#include <vector>
+#include "C:\Users\Maissa\Source\Repos\projet-computer-graphic\libs\glm\glm.hpp"
+#include "C:\Users\Maissa\Source\Repos\projet-computer-graphic\libs\glad\glad.h"
+#include <string>
+#include "..\include\platform\tiny_obj_loader.h"
+
+struct Vertex {
+    glm::vec3 Position;
+    glm::vec3 Normal;
+    glm::vec2 TexCoords;
+};
+
+class Mesh {
+public:
+    std::vector<Vertex> vertices;
+    std::vector<unsigned int> indices;
+    unsigned int VAO;
+
+    Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices);
+    void Draw(unsigned int shaderProgram);
+
+private:
+    unsigned int VBO, EBO;
+    void setupMesh();
+};
+
+// Function to load a 3D model from an .obj file
+Mesh loadModel(const std::string& path);
+
+#endif
