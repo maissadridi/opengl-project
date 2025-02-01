@@ -2,10 +2,10 @@
 #define MESH_H
 
 #include <vector>
-#include "C:\Users\Maissa\Source\Repos\projet-computer-graphic\libs\glm\glm.hpp"
-#include "C:\Users\Maissa\Source\Repos\projet-computer-graphic\libs\glad\glad.h"
+#include <glm/glm.hpp>
+#include <glad/glad.h>
 #include <string>
-#include "..\include\platform\tiny_obj_loader.h"
+#include <platform/tiny_obj_loader.h>
 
 struct Vertex {
     glm::vec3 Position;

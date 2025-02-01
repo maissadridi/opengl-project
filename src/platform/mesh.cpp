@@ -1,4 +1,4 @@
-#include "..\include\platform\mesh.h"
+#include <mesh.h>
 #include <iostream>
 
 
