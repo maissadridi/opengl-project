@@ -1,4 +1,4 @@
-#include "C:\Users\Maissa\Desktop\CG-project\include\platform\mesh.h"
+#include "../../include/platform/mesh.h"
 #include <iostream>
 #include "../../thirdparty/glfw-3.3.2/deps/glad/gl.h"
 #include "../../thirdparty/tinyobjloader/include/tiny_obj_loader.h"
