@@ -1,5 +1,8 @@
-#include <mesh.h>
+#include "C:\Users\Maissa\Desktop\CG-project\include\platform\mesh.h"
 #include <iostream>
+#include "../../thirdparty/glfw-3.3.2/deps/glad/gl.h"
+#include "../../thirdparty/tinyobjloader/include/tiny_obj_loader.h"
+#include "../../thirdparty/glm/glm/ext/vector_float2.hpp"
 
 
 Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices)

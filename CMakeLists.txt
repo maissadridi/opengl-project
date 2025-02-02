@@ -23,8 +23,11 @@ if(MSVC)
 add_compile_options(/arch:AVX2) #make sure SIMD optimizations take place
 endif()
 
-project(mygame)
-
+add_executable(mygame
+    src/platform/main.cpp
+    src/platform/mesh.cpp
+    thirdparty/tinyobjloader/src/tiny_obj_loader.cc  # Ajoutez cette ligne
+)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
@@ -47,8 +50,7 @@ add_subdirectory(thirdparty/profilerLib)		#profiling, just a simpe library for m
 add_subdirectory(thirdparty/gl2d)				#2D rendering library
 add_subdirectory(thirdparty/glui)				#ui library, usefull for making game menus
 # Ajouter TinyOBJLoader
-add_library(tinyobjloader STATIC src/platform/tiny_obj_loader.cc)
-target_include_directories(tinyobjloader PUBLIC libs)
+add_subdirectory(thirdparty/tinyobjloader)	
 
 # MY_SOURCES is defined to be a list of all the source files for my game 
 # DON'T ADD THE SOURCES BY HAND, they are already added with this macro

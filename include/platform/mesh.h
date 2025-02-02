@@ -5,7 +5,7 @@
 #include <glm/glm.hpp>
 #include <glad/glad.h>
 #include <string>
-#include <platform/tiny_obj_loader.h>
+#include <..\thirdparty\tinyObjLoader\include\tiny_obj_loader.h>
 
 struct Vertex {
     glm::vec3 Position;
